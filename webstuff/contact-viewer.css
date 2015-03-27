@@ -1,1 +1,12 @@
+#contact-name {
+    font-weight:bold;
+    font-size:2em;
+}
 
+#contact-phone,#contact-twitter {
+    text-align:right
+}
+
+.ui-grid-a {
+    margin-top:10px;
+}

@@ -1,49 +1,84 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Contact Viewer</title>
+		<title>Ed's Contact Viewer</title>
 
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 
 		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
 		<link rel="stylesheet" href="contact-viewer.css" />
-		<script src="http://documentcloud.github.com/underscore/underscore-min.js"></script>
-		<script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
-		<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.min.js"></script>
-		<script src="contact-viewer.js"></script>
-		<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+		<script src="http://documentcloud.github.com/underscore/underscore-min.js">
+</script>
+		<script src="https://code.jquery.com/jquery-2.1.3.min.js">
+</script>
+		<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.9/jquery.validate.min.js">
+</script>
+		<script src="contact-viewer.js">
+</script>
+		<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js">
+</script>
 	</head>
 
 	<body>
 		<div data-role="page" id="home-page">
 					<div data-role="header">
-						<h1>Contact Viewer</h1>
+						<h1>Body Contact Viewer</h1>
 						</div>
 						<div data-role="content">
-							<ul data-role="listview" id="contact-list">
-							</ul>
+							<ul data-role="listview" id="contact-list"></ul>
 						</div>
 		</div>
+		<!-- Details Page -->
 		<div data-role="page" id="details-page">
-			<div data-roles="header">
+			<div data-role="header">
 				<a data-role="button" data-rel="back">Back</a>
 				<h1>Contact Details</h1>
+				<a href="#edit-contact-page" class="ui-btn ui-icon-edit ui-btn-icon-right">Edit</a>
 			</div>
 			<div data-role="content">
-				<p class="contact-details">
-				</p>
+				<div id="contact-name">
+				</div>
+				<hr>
+				<div class="ui-grid-a">
+					<div class="ui-block-a">
+						<div id="contact-title"></div>
+					</div>
+					<div class="ui-block-b">
+						<div id="contact-phone"></div>
+					</div>
+				</div>
+				<div class="ui-grid-a">
+					<div class="ui-block-a">
+						<div id="contact-email"></div>
+					</div>
+					<div class="ui-block-b">
+						<div id="contact-twitter"></div>
+					</div>
+				</div>
 			</div>
-			<div data-role="page" id="add-contact-page">
+		</div>
+
+		<div data-role="page" id="add-contact-page">
 				<form action="add-contact" method="post">
 				</form>
+		</div>
+
+		<div data-role="page" id="edit-contact-page">
+			<div data-role="header">
+				<a data-role="button" data-rel="back">Back</a>
+				<h1>Contact Details</h1>
+				<a href="#edit-contact-page" class="ui-btn ui-icon-edit ui-btn-icon-right">Edit</a>
 			</div>
-			<div data-role="page" id="edit-contact-page">
+			<div data-role="content">
+				<div>Edit Page</div>
 				<form action="edit-contact" method="post">
 				</form>
 			</div>
-			<div data-role="page" id="delete-contact-page">
+		</div>
+
+		<div data-role="page" id="delete-contact-page">
 				<form action="delete-contact" method="post">
 				</form>
-			</div>
+		</div>
 	</body>
 </html>
